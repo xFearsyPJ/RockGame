@@ -7,81 +7,128 @@
 }
 
 :root {
-  --very-dark-blue: #0a0a23;
-  --white: #ffffff;
-  --yellow: #f1be32;
-  --golden-yellow: #feac32;
+  --bg-dark: #181824;
+  --glass: rgba(40, 44, 52, 0.85);
+  --neon-blue: #00eaff;
+  --neon-pink: #ff00c8;
+  --neon-green: #39ff14;
+  --white: #f8f8ff;
 }
 
 body {
-  background-color: var(--very-dark-blue);
-  text-align: center;
+  background: linear-gradient(135deg, #181824 60%, #23234a 100%);
   color: var(--white);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  min-height: 100vh;
+  text-align: center;
 }
 
 h1 {
-  margin: 15px 0 20px;
+  margin: 30px 0 25px;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: var(--neon-blue);
+  text-shadow: 0 0 8px var(--neon-blue);
 }
 
 .btn {
   cursor: pointer;
-  width: 100px;
-  margin: 10px;
-  color: var(--very-dark-blue);
-  background-color: var(--golden-yellow);
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border-color: var(--golden-yellow);
-  border-width: 3px;
+  width: 120px;
+  margin: 12px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--white);
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-pink) inset;
+  transition: transform 0.15s, box-shadow 0.15s;
 }
 
 .btn:hover {
-  background-image: linear-gradient(#ffcc4c, #f89808);
+  transform: scale(1.08);
+  box-shadow: 0 0 20px var(--neon-green), 0 0 30px var(--neon-blue) inset;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
 }
 
 .rules-container {
-  padding: 10px 0;
-  margin: auto;
-  border-radius: 15px;
-  border: 5px solid var(--yellow);
-  background-color: var(--white);
-  color: var(--very-dark-blue);
+  margin: 30px auto;
+  padding: 18px 0;
+  width: 90%;
+  max-width: 500px;
+  background: var(--glass);
+  border-radius: 25px;
+  border: 2px solid var(--neon-blue);
+  box-shadow: 0 0 20px var(--neon-blue);
+  color: var(--white);
+  backdrop-filter: blur(4px);
 }
 
 .rules-container ul {
-  list-style-type: none;
+  list-style-type: disc;
+  margin-left: 30px;
+  text-align: left;
 }
 
 .rules-container p {
-  margin: 10px 0;
+  margin: 14px 0;
+  font-size: 1.1rem;
 }
 
 @media (min-width: 760px) {
   .rules-container {
-    width: 60%;
+    width: 50%;
   }
 }
 
 .score-container {
   display: flex;
-  justify-content: space-around;
-  margin: 30px 0;
-  font-size: 1.2rem;
+  justify-content: space-evenly;
+  margin: 35px 0;
+  font-size: 1.3rem;
+  background: var(--glass);
+  border-radius: 18px;
+  box-shadow: 0 0 10px var(--neon-green);
+  padding: 12px 0;
 }
 
 .score {
-  font-weight: 500;
+  font-weight: 700;
+  color: var(--neon-green);
+  text-shadow: 0 0 6px var(--neon-green);
 }
 
 .results-container {
-  font-size: 1.3rem;
-  margin: 15px 0;
+  font-size: 1.4rem;
+  margin: 18px 0;
+  color: var(--neon-pink);
+  text-shadow: 0 0 8px var(--neon-pink);
 }
 
 #winner-msg {
-  margin-top: 25px;
+  margin-top: 30px;
+  font-size: 1.5rem;
+  color: var(--neon-blue);
+  text-shadow: 0 0 10px var(--neon-blue);
 }
 
 #reset-game-btn {
   display: none;
-  margin: 20px auto;
+  margin: 25px auto;
+  padding: 12px 0;
+  width: 140px;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, var(--neon-green), var(--neon-blue));
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 12px var(--neon-green), 0 0 24px var(--neon-blue) inset;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+#reset-game-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--neon-green), 0 0 30px var(--neon-blue) inset;
+  background: linear-gradient(90deg, var(--neon-pink), var(--neon-blue));
 }
